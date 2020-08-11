@@ -3,11 +3,10 @@ import math
 import random
 import pygame
 
-
+# simulation settings
 k_runners = 5
-sim_step = 0.0001
+sim_step  = 0.0001
 sim_speed = 600
-
 max_speed = k_runners * 20  # max possible speed for runners
 
 # Define some colors for drawings
@@ -16,7 +15,7 @@ white = (255, 255, 255)
 red   = (255,   0,   0)
 green = (  0, 255,   0)
 
-size = 400              # window size
+size  = 400                 # window size
 
 # Initializing pygame
 pygame.init()
