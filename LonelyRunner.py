@@ -15,11 +15,11 @@ white = (255, 255, 255)
 red   = (255,   0,   0)
 green = (  0, 255,   0)
 
-size  = 400                 # window size
+size  = 400                 # window size = length = width
 
 # Initializing pygame
 pygame.init()
-w_h     = [size, size]
+w_h     = [size, size] 
 Runners = []
 circle_color = white
 screen  = pygame.display.set_mode(w_h)
@@ -48,9 +48,9 @@ class Runner:
             self.lonely = True
                 
     def display(self):
-        displx = int(np.round(size/2) + np.round(size/4) * (math.cos(self.pos)))
-        disply = int(np.round(size/2) + np.round(size/4) * (-(math.sin(self.pos))))
-        pygame.draw.circle(screen, self.color , [displx, disply], self.size)
+        displx = int(np.round(size / 2) + np.round(size / 4) * (math.cos(self.pos)))
+        disply = int(np.round(size/2) + np.round(size / 4) * (-(math.sin(self.pos))))
+        pygame.draw.circle(screen, self.color, [displx, disply], self.size)
             
 
 ### create runners ###
