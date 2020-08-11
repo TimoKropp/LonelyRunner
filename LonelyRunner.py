@@ -46,7 +46,6 @@ class Runner:
             # on a unit circle
         if sorted(self.distances)[1] > (2 * np.pi / k_runners) and sorted(self.distances)[2] > (2 * np.pi / k_runners):
             self.lonely = True
-
                 
     def display(self):
         displx = int(np.round(size/2) + np.round(size/4) * (math.cos(self.pos)))
@@ -60,6 +59,7 @@ random.shuffle(speed_list)                      # shuffle list for random value
 for k in range(0, k_runners):                   # create Runners with speed value from shuffled list
     Runners.append(Runner(0, speed_list[k]))
 
+    
 ### loop ###
 while stop == False:                        # check for exit
     for event in pygame.event.get():        # User did something
@@ -68,8 +68,8 @@ while stop == False:                        # check for exit
 
     # draw background and circle track
     screen.fill(black)
-
     pygame.draw.circle(screen, circle_color, [int(np.round(size / 2)), int(np.round(size / 2))], int(np.round(size / 4)), 1)
+    
     for k in range(0, k_runners):
         # calculate distance to all other runners including self
         Runners[k].pos += Runners[k].speed * sim_step
